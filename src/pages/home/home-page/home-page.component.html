@@ -6,26 +6,21 @@
 <table>
   <tbody>
     <tr>
-      <th>ID </th>
-      <th>姓名 </th>
-      <th>性别 </th>
-      <th>Name </th>
-      <th>github </th>
-      <th>exam1 </th>
-      <th>exam2 </th>
-      <th>exam3 </th>
+      <th>品牌 </th>
+      <th>品牌(英语) </th>
+      <th>品牌所属国 </th>
+      <th>型号 </th>
+      <th>月销量(台/月) </th>
     </tr>
   </tbody>
   <tbody>
     <tr *ngFor="let user of users">
-      <td>{{user.index}}</td>
       <td>{{user.name}}</td>
-      <td>{{user.sex}}</td>
-      <td>{{user.name_en}} </td>
-      <td><a target="_blank" href="http://github.com/{{user.github}}">{{user.github}}</a></td>
-      <td>{{user.exam1}}</td>
-      <td>{{user.exam2}}</td>
-      <td>{{user.exam3}}</td>
+      <td>{{user.name_en}}</td>
+      <td>{{user.country}}</td>
+      <td>{{user.sub_name}}</td>
+      <td>{{user.sale_amount}} </td>
+      <!--<td><a target="_blank" href="http://github.com/{{user.github}}">{{user.github}}</a></td>-->
     </tr>
   </tbody>
 </table>
