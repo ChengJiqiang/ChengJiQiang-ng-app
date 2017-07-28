@@ -16,6 +16,9 @@ const SSRroutes: Routes = [
 import { HomePageComponent } from '../pages/home/home-page/home-page.component';
 import { AboutPageComponent } from '../pages/about/about-page/about-page.component';
 import { LoginPageComponent } from '../pages/user/login-page/login-page.component';
+// cjq add start
+import { WbsListComponent } from '../pages/wbs/wbs-list/wbs-list.component';
+// cjq add end
 const SPAroutes: Routes = [
   {
     path: '',
@@ -24,6 +27,9 @@ const SPAroutes: Routes = [
   { path: 'home', component: HomePageComponent },
   { path: 'about', component: AboutPageComponent },
   { path: 'login', component: LoginPageComponent },
+  // cjq add start
+  { path: 'wbs', component: WbsListComponent },
+  // cjq add end
 ];
 
 // 配置路由模式

@@ -1,0 +1,39 @@
+<p>项目组内任务管理(WBS)</p>
+
+<div class="table-controls">
+    <div class="search-area" style="height:60px;">
+      <select [(ngModel)]="searchType" style="float:left;">
+        <option value="name">姓名</option>
+        <option value="taskId">任务ID</option>
+      </select>
+<input style="float:left;" 
+  [(ngModel)]="searchText"/>
+<button style="float:left;" (click)="search()">搜索</button>
+
+</div>
+
+<button (click)="sortByAsccending()">正序</button>
+<button (click)="sortByDesccending()">倒序</button>
+<button (click)="sortByRadom()">随机</button>
+<button (click)="deleteLast()">删除</button>
+<button routerLink="/student/edit/new">新增</button>
+</div>
+
+<div class="row table-header">
+      <div class="col-1" (click)="sortByAsccending('id')">员工ID</div>
+      <div class="col-1" (click)="sortByAsccending('name')">姓名</div>
+      <div class="col-2" (click)="sortByAsccending('taskId')">任务ID</div>
+      <div class="col-1" (click)="sortByAsccending('startDay')">预计开始日</div>
+      <div class="col-1" (click)="sortByDesccending('endDay')">预计结束日</div>
+      <div class="col-1" (click)="sortByAsccending('startDay1')">实际开始日</div>
+      <div class="col-1" (click)="sortByDesccending('endDay1')">实际结束日</div>
+      <div class="col-1" (click)="sortByDesccending('percent')">完成率(%)</div>
+      <div class="col-2">操作</div>
+</div>
+
+<!--<div class="row table-row" *ngFor="let wbsTmp of wbs">
+  <app-student-item [student]="student" (studentClick)="selectStudent = $event"></app-student-item>
+</div>-->
+<div class="row table-row" *ngFor="let wbsTmp of wbs">
+  <app-wbs-item [wbs]="wbsTmp" ></app-wbs-item>
+</div>
