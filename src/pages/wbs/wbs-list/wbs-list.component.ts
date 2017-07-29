@@ -9,9 +9,9 @@ import { WbsService } from '..//wbs.service';
 })
 export class WbsListComponent implements OnInit {
   searchText: string = "";
-  searchType: string = "name";
+  searchType: string = "id";
   selectEmployee:any={
-    name:"未选择"
+    id:"未选择"
   };
   searchResult:Array<any>;
   wbs:Array<any>=[];

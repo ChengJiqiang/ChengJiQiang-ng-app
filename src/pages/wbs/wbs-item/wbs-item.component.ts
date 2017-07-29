@@ -10,9 +10,26 @@ import { WbsService } from '..//wbs.service';
 })
 export class WbsItemComponent implements OnInit {
   @Input() wbs:any
+  @Output() wbsClick = new EventEmitter<any>();
   constructor(private wbsSur:WbsService) { 
   }
-
+  onWbsClick(){
+    this.wbsClick.emit(this.wbs)
+  }
+  check(){
+    if(this.wbs.check&&this.wbs.check==true){
+      this.wbs.check = false;
+    }else{
+      this.wbs.check = true
+    }
+  }
+  isChecked(){
+    if(this.wbs.check&&this.wbs.check==true){
+      return true
+    }else{
+      return false
+    }
+  }
   ngOnInit() {
   }
 

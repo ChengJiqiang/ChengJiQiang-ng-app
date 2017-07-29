@@ -24,12 +24,13 @@ const SPAroutes: Routes = [
     path: '',
     children: []
   },
-  { path: 'home', component: HomePageComponent },
-  { path: 'about', component: AboutPageComponent },
-  { path: 'login', component: LoginPageComponent },
   // cjq add start
   { path: 'wbs', component: WbsListComponent },
   // cjq add end
+  { path: 'home', component: HomePageComponent },
+  { path: 'about', component: AboutPageComponent },
+  { path: 'login', component: LoginPageComponent },
+
 ];
 
 // 配置路由模式
